@@ -11,61 +11,99 @@ struct ContentView: View {
     
     @State private var showingScore = false
     @State private var scoreTitle = ""
-    @State private var totalCorrect = 0
+//    @State private var totalCorrect = 0
+    @State private var currentStreak = 0
     
     @State private var instruments = ["Alto Flute", "Bass Clarinet", "Celesta", "Contrabassoon", "Euphonium", "Harp", "Oboe", "Organ", "Piano", "Saxophone"].shuffled()
     @State private var removedInstruments: [String] = []
     @State private var correctAnswer = Int.random(in: 0...3)
     
+    let goldColor = Color(red: 148/255, green: 130/255, blue: 80/255)
+    
+    
+    
     var body: some View {
         ZStack {
-            let lightGray = Color(red: 0.8, green: 0.8, blue: 0.8)
             
-            LinearGradient(stops:[
-                .init(color: .white, location: 0.23),
-                .init(color: lightGray, location: 0.27)
-            ], startPoint: .top, endPoint: .bottom)
+            goldColor
+                .opacity(0.3)
                 .ignoresSafeArea()
+                
+            
+//            RadialGradient(colors: [.yellow, goldColor], center: .center, startRadius: 20, endRadius: 110)
+//                .ignoresSafeArea()
+            
+//            LinearGradient(stops:[
+//                .init(color: .white, location: 0.23),
+//                .init(color: lightGray, location: 0.27)
+//            ], startPoint: .top, endPoint: .bottom)
+//                .ignoresSafeArea()
             
             VStack(spacing: 20) {
                 
+                Spacer()
+                Spacer()
+                
+                Text("Musical Instrument Quiz")
+                    .foregroundColor(goldColor)
+                    .font(Font.title.weight(.light))
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 20)
+                    .background(.regularMaterial)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .padding(.horizontal, 12)
+            
+                
+                
                 HStack {
-                    Text("Correct Answers: \( totalCorrect)")
-                    Spacer()
+                    Text("Current Streak: \( currentStreak)")
+                        .foregroundColor(.white)
+                        .padding(12)
+                        .background(.secondary)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .padding(.horizontal, 12)
                 }
-                .padding(12)
                 
                 
-                HStack(spacing: 12) {
-//                    Text("Tap the")
-//                        .font(Font.subheadline.weight(.medium))
-                    Text("Tap the " + instruments[correctAnswer])
-                        .font(Font.title.weight(.bold))
-                    Spacer()
-                }
-                .padding(12)
+                Spacer()
+                Spacer()
                 
-                HStack{
-                    ForEach(0..<2) { row in
-                        VStack {
-                            ForEach(0..<2) { column in
-                                let number = row*2 + column
-                                Button {
-                                    tappedInstrument(number)
-                                } label: {
-                                    Image(instruments[number])
-                                        .renderingMode(.original)
-                                        .resizable()
-                                        .scaledToFit()
+                
+                VStack {
+                    
+                    HStack(spacing: 12) {
+                        Text("Tap the " + instruments[correctAnswer])
+                            .font(Font.title.weight(.semibold))
+                    }
+                    .padding(.horizontal, 12)
+                    
+                    HStack{
+                        ForEach(0..<2) { row in
+                            VStack {
+                                ForEach(0..<2) { column in
+                                    let number = row*2 + column
+                                    Button {
+                                        tappedInstrument(number)
+                                    } label: {
+                                        Image(instruments[number])
+                                            .renderingMode(.original)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .padding(12)
+                                            .background(.white)
+                                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                                    }
                                 }
                             }
                         }
                     }
+                    
                 }
-                .padding(12)
-                .background(.white)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .padding(12)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.white.opacity(0.45))
+                
+                Spacer()
             }
         }
         .alert(scoreTitle, isPresented: $showingScore) {
@@ -76,7 +114,7 @@ struct ContentView: View {
     func tappedInstrument(_ number: Int) {
         if number == correctAnswer {
             scoreTitle = "Correct"
-            totalCorrect += 1
+            currentStreak += 1
             
             // Remove correctly tapped instrument
             let removed = instruments.remove(at: number)
@@ -84,7 +122,8 @@ struct ContentView: View {
             
             askQuestion()
         } else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong, you tapped the \(instruments[number])"
+            currentStreak = 0
             showingScore = true
         }
     }
@@ -92,7 +131,7 @@ struct ContentView: View {
     func askQuestion() {
         // Add back to array of instruments
         print("removedInstruments: ",removedInstruments.description)
-        if removedInstruments.count >= 4 {
+        if removedInstruments.count >= instruments.count - 4 {
             let last = removedInstruments.removeFirst()
             instruments.append(last)
         }

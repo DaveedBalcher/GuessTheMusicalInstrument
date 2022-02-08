@@ -269,7 +269,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheMusicalInstrument/Preview Content\"";
-				DEVELOPMENT_TEAM = GGPN6X48BE;
+				DEVELOPMENT_TEAM = UCDD4VPG49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -299,7 +299,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheMusicalInstrument/Preview Content\"";
-				DEVELOPMENT_TEAM = GGPN6X48BE;
+				DEVELOPMENT_TEAM = UCDD4VPG49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
