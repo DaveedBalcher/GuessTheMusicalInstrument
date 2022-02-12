@@ -14,12 +14,14 @@ struct ContentView: View {
 //    @State private var totalCorrect = 0
     @State private var currentStreak = 0
     
-    @State private var instruments = ["Alto Flute", "Bass Clarinet", "Celesta", "Contrabassoon", "Euphonium", "Harp", "Oboe", "Organ", "Piano", "Saxophone"].shuffled()
+    @State private var instruments = ["Alto Flute", "Bass Clarinet", "Bass Drum", "Celesta", "Cello", "Contrabassoon", "Double Bass", "Euphonium", "French Horn", "Harp", "Marimba", "Oboe", "Organ", "Piano", "Piccolo", "Saxophone", "Snare Drum", "Timpani", "Trombone", "Trumpet", "Tuba", "Viola", "Violin", "Xylophone"].shuffled()
     @State private var removedInstruments: [String] = []
     @State private var correctAnswer = Int.random(in: 0...3)
     
-    let goldColor = Color(red: 148/255, green: 130/255, blue: 80/255)
+    private let audioQueue = AudioQueue.shared
     
+    private let goldColor = Color(red: 148/255, green: 130/255, blue: 80/255)
+    private let longScreen = UIScreen.ratio > 2.0
     
     
     var body: some View {
@@ -28,25 +30,17 @@ struct ContentView: View {
             goldColor
                 .opacity(0.3)
                 .ignoresSafeArea()
-                
-            
-//            RadialGradient(colors: [.yellow, goldColor], center: .center, startRadius: 20, endRadius: 110)
-//                .ignoresSafeArea()
-            
-//            LinearGradient(stops:[
-//                .init(color: .white, location: 0.23),
-//                .init(color: lightGray, location: 0.27)
-//            ], startPoint: .top, endPoint: .bottom)
-//                .ignoresSafeArea()
             
             VStack(spacing: 20) {
                 
-                Spacer()
+                if longScreen {
+                    Spacer()
+                }
                 Spacer()
                 
                 Text("Musical Instrument Quiz")
                     .foregroundColor(goldColor)
-                    .font(Font.title.weight(.light))
+                    .font(Font.title2.weight(.light))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 20)
                     .background(.regularMaterial)
@@ -64,8 +58,9 @@ struct ContentView: View {
                         .padding(.horizontal, 12)
                 }
                 
-                
-                Spacer()
+                if longScreen {
+                    Spacer()
+                }
                 Spacer()
                 
                 
@@ -73,7 +68,7 @@ struct ContentView: View {
                     
                     HStack(spacing: 12) {
                         Text("Tap the " + instruments[correctAnswer])
-                            .font(Font.title.weight(.semibold))
+                            .font(Font.title2.weight(.semibold))
                     }
                     .padding(.horizontal, 12)
                     
@@ -97,13 +92,20 @@ struct ContentView: View {
                             }
                         }
                     }
+//                    .padding(12)
                     
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
-                .background(.white.opacity(0.45))
+                .background(.white.opacity(0.33))
                 
-                Spacer()
+                if longScreen {
+                    Spacer()
+                }
+                
+                Text("© Daveed Balcher 2022")
+                    .foregroundColor(.white)
+                    .font(Font.body.weight(.light))
             }
         }
         .alert(scoreTitle, isPresented: $showingScore) {
@@ -122,6 +124,9 @@ struct ContentView: View {
             
             askQuestion()
         } else {
+            
+            audioQueue.playSadTombone()
+            
             scoreTitle = "Wrong, you tapped the \(instruments[number])"
             currentStreak = 0
             showingScore = true
@@ -130,7 +135,7 @@ struct ContentView: View {
     
     func askQuestion() {
         // Add back to array of instruments
-        print("removedInstruments: ",removedInstruments.description)
+//        print("removedInstruments: ",removedInstruments.description)
         if removedInstruments.count >= instruments.count - 4 {
             let last = removedInstruments.removeFirst()
             instruments.append(last)
@@ -140,6 +145,7 @@ struct ContentView: View {
         instruments.shuffle()
         correctAnswer = Int.random(in: 0...3)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
