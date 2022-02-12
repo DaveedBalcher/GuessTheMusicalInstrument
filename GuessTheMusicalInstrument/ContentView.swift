@@ -11,7 +11,6 @@ struct ContentView: View {
     
     @State private var showingScore = false
     @State private var scoreTitle = ""
-//    @State private var totalCorrect = 0
     @State private var currentStreak = 0
     
     @State private var instruments = ["Alto Flute", "Bass Clarinet", "Bass Drum", "Celesta", "Cello", "Contrabassoon", "Double Bass", "Euphonium", "French Horn", "Harp", "Marimba", "Oboe", "Organ", "Piano", "Piccolo", "Saxophone", "Snare Drum", "Timpani", "Trombone", "Trumpet", "Tuba", "Viola", "Violin", "Xylophone"].shuffled()
