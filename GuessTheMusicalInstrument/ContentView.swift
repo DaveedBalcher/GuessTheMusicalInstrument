@@ -37,7 +37,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                Text("What Musical Instrument?")
+                Text("Musical Instrument Quiz")
                     .foregroundColor(goldColor)
                     .font(Font.title2.weight(.light))
                     .frame(maxWidth: .infinity)
@@ -89,8 +89,6 @@ struct ContentView: View {
                             }
                         }
                     }
-//                    .padding(12)
-                    
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
