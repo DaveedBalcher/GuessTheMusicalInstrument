@@ -37,7 +37,7 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                Text("Musical Instrument Quiz")
+                Text("What Musical Instrument?")
                     .foregroundColor(goldColor)
                     .font(Font.title2.weight(.light))
                     .frame(maxWidth: .infinity)
@@ -45,8 +45,6 @@ struct ContentView: View {
                     .background(.regularMaterial)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .padding(.horizontal, 12)
-            
-                
                 
                 HStack {
                     Text("Current Streak: \( currentStreak)")

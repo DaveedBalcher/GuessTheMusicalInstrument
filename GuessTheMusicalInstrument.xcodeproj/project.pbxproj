@@ -20,7 +20,7 @@
 		017A755227B35A1B000DD500 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sad Trombone.wav"; sourceTree = "<group>"; };
 		01D3A85627B4B20E00A467DD /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
-		43DC958C27AEFB8E009778DD /* GuessTheMusicalInstrument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheMusicalInstrument.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43DC958C27AEFB8E009778DD /* Musical Instruments Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical Instruments Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheMusicalInstrumentApp.swift; sourceTree = "<group>"; };
 		43DC959127AEFB8E009778DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		43DC959327AEFBA6009778DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		43DC958D27AEFB8E009778DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				43DC958C27AEFB8E009778DD /* GuessTheMusicalInstrument.app */,
+				43DC958C27AEFB8E009778DD /* Musical Instruments Quiz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			);
 			name = GuessTheMusicalInstrument;
 			productName = GuessTheMusicalInstrument;
-			productReference = 43DC958C27AEFB8E009778DD /* GuessTheMusicalInstrument.app */;
+			productReference = 43DC958C27AEFB8E009778DD /* Musical Instruments Quiz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -281,7 +281,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheMusicalInstrument/Preview Content\"";
-				DEVELOPMENT_TEAM = UCDD4VPG49;
+				DEVELOPMENT_TEAM = L4NZ727S2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -296,7 +296,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DaveedBalcher.GuessTheMusicalInstrument;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Musical Instruments Quiz";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheMusicalInstrument/Preview Content\"";
-				DEVELOPMENT_TEAM = UCDD4VPG49;
+				DEVELOPMENT_TEAM = L4NZ727S2F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -326,7 +326,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DaveedBalcher.GuessTheMusicalInstrument;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Musical Instruments Quiz";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
