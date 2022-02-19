@@ -11,15 +11,12 @@ import AVFoundation
 struct AudioTrack {
     var name: String
     var fileType: String = "wav"
-//    var index: Int?
 }
-
-
 
 class AudioQueue {
     
     var audioTracks: [AudioTrack] = [
-        AudioTrack(name: "SadTrombone")
+        AudioTrack(name: "Sad Trombone")
     ]
     
     var queue: [AVAudioPlayer?] = []
@@ -36,12 +33,12 @@ class AudioQueue {
         for track in audioTracks {
             
             // setup with resource
-//                let path = Bundle.main.path(forResource: track.name, ofType: track.fileType) {
-//                if let player = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path), fileTypeHint: track.fileType) {
+            if let path = Bundle.main.path(forResource: track.name, ofType: track.fileType) {
+                if let player = try? AVAudioPlayer(contentsOf: URL(fileURLWithPath: path), fileTypeHint: track.fileType) {
             
-            // setup with dataAsset
-            if let asset = NSDataAsset(name:track.name) {
-                if let player = try? AVAudioPlayer(data: asset.data, fileTypeHint: track.fileType) {
+//            // setup with dataAsset
+//            if let asset = NSDataAsset(name:track.name) {
+//                if let player = try? AVAudioPlayer(data: asset.data, fileTypeHint: track.fileType) {
                     queue.append(player)
                     break
                 } else {

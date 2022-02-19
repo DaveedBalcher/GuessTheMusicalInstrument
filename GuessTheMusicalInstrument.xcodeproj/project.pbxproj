@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		017A755327B35A1B000DD500 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A755227B35A1B000DD500 /* Extensions.swift */; };
-		019F43E427B80CB0003F5CE0 /* Sad Trombone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */; };
 		01D3A85727B4B20E00A467DD /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D3A85627B4B20E00A467DD /* AudioPlayer.swift */; };
+		01DCA91427C144E70075BD96 /* Sad Trombone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 01DCA91327C144E70075BD96 /* Sad Trombone.wav */; };
 		43DC959027AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */; };
 		43DC959227AEFB8E009778DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC959127AEFB8E009778DD /* ContentView.swift */; };
 		43DC959427AEFBA6009778DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DC959327AEFBA6009778DD /* Assets.xcassets */; };
@@ -18,8 +18,9 @@
 
 /* Begin PBXFileReference section */
 		017A755227B35A1B000DD500 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sad Trombone.wav"; sourceTree = "<group>"; };
 		01D3A85627B4B20E00A467DD /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		01DCA91127C13A620075BD96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		01DCA91327C144E70075BD96 /* Sad Trombone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sad Trombone.wav"; sourceTree = "<group>"; };
 		43DC958C27AEFB8E009778DD /* GuessTheMusicalInstrument.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheMusicalInstrument.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheMusicalInstrumentApp.swift; sourceTree = "<group>"; };
 		43DC959127AEFB8E009778DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,12 +58,13 @@
 		43DC958E27AEFB8E009778DD /* GuessTheMusicalInstrument */ = {
 			isa = PBXGroup;
 			children = (
+				01DCA91127C13A620075BD96 /* Info.plist */,
 				43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */,
 				43DC959127AEFB8E009778DD /* ContentView.swift */,
 				01D3A85627B4B20E00A467DD /* AudioPlayer.swift */,
 				017A755227B35A1B000DD500 /* Extensions.swift */,
+				01DCA91327C144E70075BD96 /* Sad Trombone.wav */,
 				43DC959327AEFBA6009778DD /* Assets.xcassets */,
-				019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */,
 				43DC959527AEFBA6009778DD /* Preview Content */,
 			);
 			path = GuessTheMusicalInstrument;
@@ -134,7 +136,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				019F43E427B80CB0003F5CE0 /* Sad Trombone.wav in Resources */,
+				01DCA91427C144E70075BD96 /* Sad Trombone.wav in Resources */,
 				43DC959727AEFBA6009778DD /* Preview Assets.xcassets in Resources */,
 				43DC959427AEFBA6009778DD /* Assets.xcassets in Resources */,
 			);
@@ -279,11 +281,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheMusicalInstrument/Preview Content\"";
 				DEVELOPMENT_TEAM = UCDD4VPG49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessTheMusicalInstrument/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Musical Instrument Quiz";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,11 +313,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"GuessTheMusicalInstrument/Preview Content\"";
 				DEVELOPMENT_TEAM = UCDD4VPG49;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuessTheMusicalInstrument/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Musical Instrument Quiz";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

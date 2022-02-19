@@ -38,14 +38,16 @@ struct ContentView: View {
                 }
                 Spacer()
                 
-                Text("Musical Instrument Quiz")
-                    .foregroundColor(goldColor)
-                    .font(Font.title2.weight(.light))
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 20)
-                    .background(.regularMaterial)
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .padding(.horizontal, 12)
+                VStack {
+                    Text("Musical Instrument Quiz")
+                }
+                .foregroundColor(goldColor)
+                .font(Font.title2.weight(.light))
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.regularMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .padding(.horizontal, 12)
             
                 
                 
