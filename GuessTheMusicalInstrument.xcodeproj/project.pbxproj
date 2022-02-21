@@ -10,6 +10,9 @@
 		017A755327B35A1B000DD500 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017A755227B35A1B000DD500 /* Extensions.swift */; };
 		019F43E427B80CB0003F5CE0 /* Sad Trombone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */; };
 		01D3A85727B4B20E00A467DD /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D3A85627B4B20E00A467DD /* AudioPlayer.swift */; };
+		1790556327C3061B005F89A3 /* RoundedCornerImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790556227C3061B005F89A3 /* RoundedCornerImage.swift */; };
+		1790556527C30E7F005F89A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790556427C30E7F005F89A3 /* Constants.swift */; };
+		1790556727C30F88005F89A3 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1790556627C30F88005F89A3 /* ViewModifiers.swift */; };
 		43DC959027AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */; };
 		43DC959227AEFB8E009778DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43DC959127AEFB8E009778DD /* ContentView.swift */; };
 		43DC959427AEFBA6009778DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43DC959327AEFBA6009778DD /* Assets.xcassets */; };
@@ -20,6 +23,9 @@
 		017A755227B35A1B000DD500 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Sad Trombone.wav"; sourceTree = "<group>"; };
 		01D3A85627B4B20E00A467DD /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		1790556227C3061B005F89A3 /* RoundedCornerImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerImage.swift; sourceTree = "<group>"; };
+		1790556427C30E7F005F89A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1790556627C30F88005F89A3 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		43DC958C27AEFB8E009778DD /* Musical Instrument Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musical Instrument Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheMusicalInstrumentApp.swift; sourceTree = "<group>"; };
 		43DC959127AEFB8E009778DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				43DC958F27AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift */,
 				43DC959127AEFB8E009778DD /* ContentView.swift */,
 				01D3A85627B4B20E00A467DD /* AudioPlayer.swift */,
+				1790556227C3061B005F89A3 /* RoundedCornerImage.swift */,
+				1790556627C30F88005F89A3 /* ViewModifiers.swift */,
+				1790556427C30E7F005F89A3 /* Constants.swift */,
 				017A755227B35A1B000DD500 /* Extensions.swift */,
 				43DC959327AEFBA6009778DD /* Assets.xcassets */,
 				019F43E327B80CB0003F5CE0 /* Sad Trombone.wav */,
@@ -148,9 +157,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				43DC959227AEFB8E009778DD /* ContentView.swift in Sources */,
+				1790556727C30F88005F89A3 /* ViewModifiers.swift in Sources */,
+				1790556327C3061B005F89A3 /* RoundedCornerImage.swift in Sources */,
 				43DC959027AEFB8E009778DD /* GuessTheMusicalInstrumentApp.swift in Sources */,
 				017A755327B35A1B000DD500 /* Extensions.swift in Sources */,
 				01D3A85727B4B20E00A467DD /* AudioPlayer.swift in Sources */,
+				1790556527C30E7F005F89A3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
